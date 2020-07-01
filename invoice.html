@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+</head>
+<style>
+    body{
+	background: whitesmoke;
+}
+.page{
+	margin-top: 20px !important;
+	margin-bottom: 20px !important;
+	height: 850px;
+	margin: auto;
+	padding-top: 10px;
+	width: 600px;
+	box-shadow: 0 0 100px rgba(0,0,0,0.2);
+	max-width: 100%;
+	padding-left: 30px;
+	padding-right: 30px;
+	background: white;
+}
+.f{
+	color: #212e59;
+	font-size:3em;
+	position: absolute;
+	font-family: 'Oswald',sans-serif;
+}
+img{
+	height: 70px;
+	position:absolute;
+	margin-left: 530px;
+	margin-top: 40px;
+}
+
+.address{
+	margin-top: 120px;
+	font-size: 13px;
+	font-family: 'oswald', sans-serif;
+}
+.shipping-info-head{
+	column-count: 4;
+}
+
+.shipping-info-head h6{
+	font-size: 17px;
+	margin-top: 0px;
+	font-family: 'Teko', sans-serif; 
+}
+.shipping-info-head p{
+	font-size: 15px;
+	margin-top: 5px !important;
+	font-weight: 100;
+	font-family: 'Teko', sans-serif; 
+}
+.shipping-info-1{
+	column-count: 4;
+	margin-top: -35px;
+}
+
+.shipping-info-1 h6{
+	font-size: 17px;
+	margin-top: 0px;
+	font-family: 'Teko', sans-serif; 
+}
+.shipping-info-1 p{
+	font-size: 15px;
+	margin-top: 5px !important;
+	font-weight: 100;
+	font-family: 'Teko', sans-serif; 
+}
+.shipping-info-2{
+	column-count: 4;
+	margin-top: -22px;
+}
+
+.shipping-info-2 h6{
+	font-size: 17px;
+	margin-top: 0px;
+	font-family: 'Teko', sans-serif; 
+}
+.shipping-info-2 p{
+	font-size: 15px;
+	margin-top: 5px !important;
+	font-weight: 100;
+	font-family: 'Teko', sans-serif; 
+}
+.shipping-info-3{
+	column-count: 4;
+	margin-top: -22px;
+}
+
+.shipping-info-3 h6{
+	font-size: 17px;
+	margin-top: 0px;
+	font-family: 'Teko', sans-serif; 
+}
+.shipping-info-3 p{
+	font-size: 15px;
+	margin-top: 5px !important;
+	font-weight: 100;
+	font-family: 'Teko', sans-serif; 
+}
+
+.main-strip{
+	column-count: 4;
+	margin-top: 17px;
+}
+
+.main-strip h6{
+	font-size: 17px;
+	color: #212e59;
+	margin-top: 0px;
+	font-family: 'Teko', sans-serif; 
+}
+.top{
+	margin-bottom: -12px;
+	border-top: #212e59 2px dotted;
+}
+.bottom{
+	margin-top: -35px;
+	border-top: #212e59 2px dotted;
+}
+
+.shipping-1{
+	column-count: 4;
+	margin-top: 1px;
+}
+
+.shipping-1 p{
+	font-size: 17px;
+	margin-top: 5px !important;
+	font-weight: 100;
+	font-family: 'Teko', sans-serif; 
+}
+.shipping-2{
+	column-count: 4;
+	margin-top: -10px;
+}
+
+
+.shipping-2 p{
+	font-size: 17px;
+	margin-top: 5px !important;
+	font-weight: 100;
+	font-family: 'Teko', sans-serif; 
+}
+.shipping-3{
+	column-count: 4;
+	margin-top: -10px;
+}
+
+.shipping-3 p{
+	font-size: 17px;
+	margin-top: 5px !important;
+	font-weight: 100;
+	font-family: 'Teko', sans-serif; 
+}
+
+total{
+	float: right;
+	margin-right: -5px;
+	width: 300px;
+}
+
+.shipping-total{
+	column-count: 2;
+	margin-top: 10px;
+}
+
+
+.shipping-total p{
+	font-size: 17px;
+	margin-top: 5px !important;
+	font-weight: 100;
+	font-family: 'Teko', sans-serif; 
+}
+.shipping-total-1{
+	column-count: 2;
+	margin-top: -10px;
+}
+
+
+.shipping-total-1 p{
+	font-size: 17px;
+	margin-top: 5px !important;
+	font-weight: 100;
+	font-family: 'Teko', sans-serif; 
+}
+.shipping-total-2{
+	column-count: 2;
+	margin-top: -10px;
+}
+.shipping-total-2 h6{
+	font-size: 23px;
+	color: #212e59;
+	margin-top: 0px;
+	font-family: 'Teko', sans-serif; 
+}
+
+
+@media(max-width: 750px){
+	img{
+		height: 70px;
+		position:absolute;
+		margin-left: 430px;
+		margin-top: 40px;
+}
+
+}
+</style>
+<body>
+    <div class="page">
+        <h1 class="f">Store Name</h1>
+        <img src="https://icon-library.com/images/grocery-store-icon/grocery-store-icon-12.jpg" ALIGN="right">
+        <p class="address"><b>Marathalli</b><br>Old Airport Road<br>Bangaluru</p>
+        <div class="shipping-info-head">
+            <h6>BILL TO</h6>
+            <h6>SHIP TO</h6>
+            <h6>RECEIPT#</h6>
+            <p>BLR-001</p>
+        </div>
+        <div class="shipping-info-1">
+            <p>Akash Nayak</p>
+            <p>Akash Nayak</p>
+            <h6>RECEIPT DATE</h6>
+            <p>01/07/2020</p>
+        </div>
+        <div class="shipping-info-2">
+            <p>SKV Nivas</p>
+            <p>3rd Cross</p>
+            <h6>P.O.#</h6>
+            <p>560037</p>
+        </div>
+        <div class="shipping-info-3">
+            <p>Bangaluru KA</p>
+            <p>Marathalli, KA-68</p>
+            <h6>DUE DATE</h6>
+            <p>26/2/2019</p>
+        </div>
+        <hr class="top">
+        <div class="main-strip">
+            <h6>QTY</h6>
+            <h6>DESCRIPTION</h6>
+            <h6>UNIT PRICE</h6>
+            <h6>AMOUNT</h6>
+        </div>
+     <hr class="bottom">
+        <div class="shipping-1">
+            <p>1</p>
+            <p>Item One</p>
+            <p>Rs 100.00</p>
+            <p>Rs 100.00</p>
+        </div>
+        <div class="shipping-1">
+            <p>2</p>
+            <p>Item Two</p>
+            <p>Rs 100.00</p>
+            <p>Rs 100.00</p>
+        </div>
+        <div class="shipping-1">
+            <p>3</p>
+            <p>Item Three</p>
+            <p>Rs 100.00</p>
+            <p>Rs 100.00</p>
+        </div>
+        <total>
+        <div class="shipping-total">
+            <p>Subtotal</p>
+            <p>Rs 145.00</p>
+        </div>
+        <div class="shipping-total-1">
+            <p>Sales Tax 6.25%</p>
+            <p>9.06</p>
+        </div>
+        <div class="shipping-total-2">
+            <h6>TOTAL</h6>
+            <h6>Rs 154.06</h6>
+        </div>
+        </total>
+    </div>
+</body>
+</html>
